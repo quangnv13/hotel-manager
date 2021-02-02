@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{653C65D3-E82F-4027-A3E0-C20B429DEAFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLKS</RootNamespace>
+    <AssemblyName>QLKS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Access Layer\AccountDAO.cs" />
+    <Compile Include="Data Access Layer\BillDAO.cs" />
+    <Compile Include="Data Access Layer\CustomerDAO.cs" />
+    <Compile Include="Data Access Layer\DataProvider.cs" />
+    <Compile Include="Data Access Layer\EmployeesDAO.cs" />
+    <Compile Include="Data Access Layer\RoomDAO.cs" />
+    <Compile Include="Data Access Layer\SelectRoomDAO.cs" />
+    <Compile Include="Data Access Layer\ServicesDAO.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\BillDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\EmployeesDTO.cs" />
+    <Compile Include="DTO\RoomDTO.cs" />
+    <Compile Include="Data Access Layer\SuppliesDAO.cs" />
+    <Compile Include="DTO\SelectRoomDTO.cs" />
+    <Compile Include="DTO\ServicesDTO.cs" />
+    <Compile Include="DTO\SuppliesDTO.cs" />
+    <Compile Include="Presentation Layer\frmAccManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmAccManager.Designer.cs">
+      <DependentUpon>frmAccManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmAddService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmAddService.Designer.cs">
+      <DependentUpon>frmAddService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmchange_pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmchange_pass.Designer.cs">
+      <DependentUpon>frmchange_pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmdatphong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmdatphong.Designer.cs">
+      <DependentUpon>frmdatphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmhoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmhoadon.Designer.cs">
+      <DependentUpon>frmhoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frminfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frminfo.Designer.cs">
+      <DependentUpon>frminfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmkhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmkhachhang.Designer.cs">
+      <DependentUpon>frmkhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmmain.Designer.cs">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmnhanvien.Designer.cs">
+      <DependentUpon>frmnhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmphong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmphong.Designer.cs">
+      <DependentUpon>frmphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmService.Designer.cs">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmvattu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmvattu.Designer.cs">
+      <DependentUpon>frmvattu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation Layer\frmAccManager.resx">
+      <DependentUpon>frmAccManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmAddService.resx">
+      <DependentUpon>frmAddService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmchange_pass.resx">
+      <DependentUpon>frmchange_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmdatphong.resx">
+      <DependentUpon>frmdatphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmhoadon.resx">
+      <DependentUpon>frmhoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frminfo.resx">
+      <DependentUpon>frminfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmkhachhang.resx">
+      <DependentUpon>frmkhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmmain.resx">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmnhanvien.resx">
+      <DependentUpon>frmnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmphong.resx">
+      <DependentUpon>frmphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmService.resx">
+      <DependentUpon>frmService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmvattu.resx">
+      <DependentUpon>frmvattu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_hht1.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
